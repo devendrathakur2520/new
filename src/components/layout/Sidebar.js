@@ -5,7 +5,7 @@ import {
   FaRegCalendarAlt,
   FaRegCalendar,
 } from 'react-icons/fa';
-import  {Projects}  from './Projects';
+import { Projects } from './Projects';
 import { useDispatch } from 'react-redux';
 import { setselectedProject } from '../../actions';
 import { useSelectedProjectValue } from '../../context';
@@ -36,7 +36,7 @@ export const Sidebar = () => {
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 setActive('inbox');
-              dispatch(  setselectedProject('INBOX'));
+                dispatch(setselectedProject('INBOX'));
               }
             }}
           >
@@ -88,7 +88,7 @@ export const Sidebar = () => {
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 setActive('next_7');
-               dispatch( setselectedProject('NEXT_7'));
+                dispatch(setselectedProject('NEXT_7'));
               }
             }}
           >

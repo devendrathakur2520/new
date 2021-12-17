@@ -1,20 +1,16 @@
 import React from 'react'
 import { firebase } from '../firebase'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { generatePushId } from '../helpers'
-import { setProjects,setShow,setProjectName } from '../actions'
+import { setProjects, setShow, setProjectName } from '../actions'
 import { useProjectsValue } from '../context'
 export default function AddProject() {
 
-    // const state = useSelector(state => state.state)
     const dispatch = useDispatch()
-    // const [show, setShow] = useState(shouldShow);
-     const show = useSelector(state => state.shows.show)
-     console.log("hjfdhfjj",show);
-    // const [projectName, setProjectName] = useState('');
+    const show = useSelector(state => state.shows.show)
     const projectName = useSelector(state => state.projectNames.projectName)
-    console.log("dsdsdfsdd", projectName);
+    console.log("ProjectName", projectName);
 
     const projectId = generatePushId();
     const projects = useProjectsValue();

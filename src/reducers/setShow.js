@@ -1,12 +1,12 @@
 
-import { SET_SHOW, SET_TASK } from "../actions";
+import { SET_SHOW,} from "../actions";
 const initialState = {
     show:false,
    
    }
    
    export default function shows (state = initialState, action) {
-       console.log("hjfjlkfhjrmumrjpppp",state);
+       console.log("setShow",state);
   
      switch (action.type) {
        case SET_SHOW:
